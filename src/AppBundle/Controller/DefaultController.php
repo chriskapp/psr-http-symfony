@@ -6,12 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AppBundle\Psr\Response;
 use Psr\Http\Message\ServerRequestInterface;
-use Phly\Http\Server;
 
 class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @param Psr\Http\Message\ServerRequestInterface $request
+     * @return Psr\Http\Message\ResponseInterface
      */
     public function indexAction(ServerRequestInterface $request)
     {
